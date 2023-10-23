@@ -1,0 +1,56 @@
+/* font weight */
+$normal: normal;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+
+/* font size */
+$para: 1rem;
+$title: 3.125rem;
+$sub-title: 1.125rem;
+
+/* font family */
+$main-title-font: "Volkhov";
+$sub-title-font: "Poppins";
+$sub-font: "Open Sans";
+
+/* font */
+@mixin font($fontFamily: $sub-title-font, $fontWeight: $normal) {
+  font-family: $fontFamily, sans-serif;
+  font-weight: $fontWeight;
+}
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Volkhov', serif;
+ */
+
+/* Montserrat
+Thin 100
+ExtraLight 200
+Light 300
+Regular 400
+Medium 500
+SemiBold 600 */
+
+/* Open Sans
+Regular 400
+Medium 500
+SemiBold 600
+Bold 700 */
+
+/* Poppins
+ExtraLight 200
+Light 300
+Regular 400
+Medium 500
+SemiBold 600
+Bold 700
+ExtraBold 800 */
+
+/* Volkhov
+Regular 400
+Bold 700 */

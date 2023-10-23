@@ -3,9 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <!-- *** googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800&family=Volkhov:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- *** bootstarp -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- *** custom CSS -->
+    <link rel="stylesheet" href="./src/scss/style.css" />
+    <title>Jadoo Travel Agency</title>
   </head>
   <body>
+    <div class="pageholder container-fluid px-xl-5">
+      <section class="services px-0 py-4 py-md-5 px-lg-4">
+        <div class="heading service-head position-relative">
+          <h3 class="subtitle">category</h3>
+          <h1 class="maintitle">we offer best services</h1>
+          <div class="service-head-decore-element">
+            <img src="./src/assets/dotsdecoreimg.png" alt="style element" />
+          </div>
+        </div>
+        <div class="service-card-holder">
+          <div class="service-cards-box row gap-4 row-gap-md-5 gap-md-0">
+            <div
+              class="col-lg-3 col-md-6 col-sm-12 py-0 align-items-center justify-content-center d-flex"
+            >
+              <div class="service-card">
+                <div class="service-card-icon">
+                  <img
+                    src="./src/assets/satellitedishcardimg.png"
+                    class="service-card-img"
+                    alt="plane png"
+                  />
+                </div>
+                <div class="service-card-texts">
+                  <h3 class="service-card-title">Calculated Weather</h3>
+                  <p class="service-card-para">
+                    Built Wicket longer admire do barton vanity itself do in it.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6 col-sm-12 py-0 align-items-center justify-content-center d-flex position-relative"
+            >
+              <div class="service-card service-card-active">
+                <div class="service-card-icon">
+                  <img
+                    src="./src/assets/planecardimg.png"
+                    class="service-card-img service-card-plane-img"
+                    alt="plane png"
+                  />
+                </div>
+                <div class="service-card-texts">
+                  <h3 class="service-card-title">Best Flights</h3>
+                  <p class="service-card-para">
+                    Engrossed listening. Park gate sell they west hard for the.
+                  </p>
+                </div>
+              </div>
+              <div class="decore-element"></div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6 col-sm-12 py-0 align-items-center justify-content-center d-flex"
+            >
+              <div class="service-card">
+                <div class="service-card-icon">
+                  <img
+                    src="./src/assets/mikecardimg.png"
+                    class="service-card-img"
+                    alt="plane png"
+                  />
+                </div>
+                <div class="service-card-texts">
+                  <h3 class="service-card-title">Local Events</h3>
+                  <p class="service-card-para">
+                    Barton vanity itself do in it. Preferd to men it engrossed
+                    listening.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6 col-sm-12 py-0 align-items-center justify-content-center d-flex"
+            >
+              <div class="service-card">
+                <div class="service-card-icon">
+                  <img
+                    src="./src/assets/settingcardimg.png"
+                    class="service-card-img"
+                    alt="plane png"
+                  />
+                </div>
+                <div class="service-card-texts">
+                  <h3 class="service-card-title">Customization</h3>
+                  <p class="service-card-para">
+                    We deliver outsourced aviation services for military
+                    customers
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
     <script src="./src/script.js"></script>
   </body>
 </html>

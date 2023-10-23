@@ -1,0 +1,338 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+
+@mixin flex($justify-content: center, $align-items: center, $direction: row) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $direction;
+}
+@mixin positionAbsolute($top: auto, $bottom: auto, $left: auto, $right: auto) {
+  position: absolute;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
+/* css reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html {
+  color-scheme: dark light;
+}
+html,
+body {
+  height: 100%;
+}
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* styles */
+body {
+  background-color: $main-bg;
+  color: $main-text-color;
+}
+
+/* services */
+.services {
+  @include flex($direction: column);
+  padding-top: 1rem;
+  color: $main-text-color;
+  .heading {
+    @include flex($direction: column);
+    gap: 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    h3 {
+      text-align: center;
+      font-size: $sub-title/1.5;
+      @include font($fontWeight: $semiBold);
+      color: $sub-title-color;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      text-align: center;
+      font-size: $title / 1.7;
+      text-transform: capitalize;
+      @include font("Volkhov", $bold);
+      color: $main-text-color;
+
+      position: relative;
+      z-index: 1;
+    }
+    .service-head-decore-element {
+      @include positionAbsolute($top: 0, $right: 0);
+      width: 3.25rem;
+      height: 3.25rem;
+      z-index: 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .service-card-holder {
+    @include flex($direction: column);
+    .service-cards-box {
+      padding-inline: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      div {
+        .service-card {
+          @include flex($direction: column);
+          width: fit-content;
+          gap: 1rem;
+          padding: 1rem;
+          border-radius: 2rem;
+          position: relative;
+          z-index: 1;
+          overflow: hidden;
+          transition: all ease-in-out 0.2s;
+          .service-card-icon {
+            width: 60px;
+            aspect-ratio: 1;
+            @include flex($direction: row);
+            img {
+              width: 100%;
+              aspect-ratio: 3/3;
+              object-fit: contain;
+            }
+            .service-card-plane-img {
+              transform: scale(1.8);
+            }
+          }
+          .service-card-texts {
+            h3 {
+              text-align: center;
+              font-size: $sub-title/1.2;
+              @include font("Open Sans", $semiBold);
+            }
+            p {
+              font-size: $para/1.5;
+              color: $para-color;
+              text-align: center;
+              @include font($fontWeight: $medium);
+            }
+          }
+
+          &:hover {
+            background-color: $main-bg;
+            box-shadow: 0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0),
+              0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.01),
+              0px 20px 13px 0px rgba(0, 0, 0, 0.01),
+              0px 38.51852px 25.48148px 0px rgba(0, 0, 0, 0.01),
+              0px 64.81481px 46.85185px 0px rgba(0, 0, 0, 0.02),
+              0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+          }
+        }
+        .service-card-active {
+          background-color: $main-bg;
+          box-shadow: 0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0),
+            0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.01),
+            0px 20px 13px 0px rgba(0, 0, 0, 0.01),
+            0px 38.51852px 25.48148px 0px rgba(0, 0, 0, 0.01),
+            0px 64.81481px 46.85185px 0px rgba(0, 0, 0, 0.02),
+            0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+        }
+        .decore-element {
+          @include positionAbsolute($left: -1rem, $bottom: -1rem);
+          // border-radius: 1.875rem 0rem 0.625rem 0rem;
+          border-radius: 1.5rem 0rem 0.625rem 0rem;
+          background-color: $btn-color-two;
+          width: 3.25rem;
+          height: 3.25rem;
+          z-index: 0;
+        }
+      }
+    }
+  }
+}
+
+/* media query breakpoints */
+
+/* tablet */
+
+@media (min-width: 768px) {
+  /* services */
+  .services {
+    .heading {
+      margin-bottom: 2rem;
+
+      h3 {
+        font-size: $sub-title;
+      }
+      h1 {
+        font-size: $title;
+      }
+      .service-head-decore-element {
+        @include positionAbsolute($top: -1rem, $right: 0);
+        width: 5.25rem;
+        height: 5.25rem;
+      }
+    }
+    .service-card-holder {
+      .service-cards-box {
+        padding-inline: 3rem;
+        div {
+          .service-card {
+            padding: 1.5rem;
+            .service-card-icon {
+              width: 80px;
+              aspect-ratio: 1;
+              img {
+                aspect-ratio: 1;
+              }
+            }
+            .service-card-texts {
+              h3 {
+                font-size: $sub-title * 1.1;
+                margin-bottom: 0.5rem;
+              }
+              p {
+                font-size: $para;
+              }
+            }
+          }
+          .decore-element {
+            @include positionAbsolute($left: -1.5rem, $bottom: -1.5rem);
+            width: 4.25rem;
+            height: 4.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* laptop */
+@media (min-width: 1024px) {
+  /* services */
+  .services {
+    .heading {
+      margin-bottom: 3rem;
+      h3 {
+        font-size: $sub-title;
+      }
+      h1 {
+        font-size: $title;
+      }
+      .service-head-decore-element {
+        width: 7.25rem;
+        height: 7.25rem;
+      }
+    }
+    .service-card-holder {
+      .service-cards-box {
+        padding-inline: 0rem;
+        div {
+          .service-card {
+            padding: 1rem;
+            .service-card-icon {
+              width: 80px;
+              aspect-ratio: 1;
+              img {
+                aspect-ratio: 1;
+              }
+            }
+          }
+          .decore-element {
+            @include positionAbsolute($left: -1.5rem, $bottom: -2rem);
+            width: 4.25rem;
+            height: 4.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* laptop large */
+@media (min-width: 1281px) {
+  /* services */
+  .services {
+    .heading {
+      .service-head-decore-element {
+        width: 9.25rem;
+        height: 9.25rem;
+      }
+    }
+    .service-card-holder {
+      .service-cards-box {
+        padding-inline: 6.5rem;
+        div {
+          .service-card {
+            padding: 2rem;
+            .service-card-icon {
+              width: 90px;
+            }
+            .service-card-texts {
+              h3 {
+                margin-bottom: 0.8rem;
+              }
+            }
+          }
+          .decore-element {
+            width: 6.25rem;
+            height: 6.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 
+@media (min-width: 1025px) {
+}
+@media (min-width: 1281px) {
+ 
+} */
