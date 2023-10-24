@@ -16,6 +16,12 @@
 }
 /* css reset */
 /* Box sizing rules */
+/* aspect */
+.hi {
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+}
 *,
 *::before,
 *::after {
@@ -137,6 +143,7 @@ body {
           z-index: 1;
           overflow: hidden;
           transition: all ease-in-out 0.2s;
+          cursor: pointer;
           .service-card-icon {
             width: 60px;
             aspect-ratio: 1;
@@ -292,11 +299,14 @@ body {
   }
 }
 /* feature */
+.feature-overflow {
+  overflow: hidden;
+}
 .feature {
   @include flex($direction: column);
   gap: 2rem;
   height: fit-content;
-  overflow: hidden;
+
   .feature-head {
     padding-inline: 2rem;
   }
@@ -501,6 +511,7 @@ body {
 /* Testimonials */
 .testimonial {
   gap: 0;
+  overflow: visible;
   .testimonial-text {
     gap: 1rem;
     .testimonial-list {
@@ -515,12 +526,16 @@ body {
         background-color: #e5e5e5;
         border-radius: 100%;
         overflow: hidden;
+        transition: all ease-in-out 0.2s;
         button {
           background: transparent;
           outline: none;
           border: none;
           width: 100%;
           height: 100%;
+        }
+        &:hover {
+          background-color: $main-text-color;
         }
       }
       .testimonial-item:first-child {
@@ -627,6 +642,54 @@ body {
           width: 100%;
           height: 100%;
           object-fit: contain;
+        }
+        &:first-child {
+          transform: rotate(180deg);
+          opacity: 0.4;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* client */
+.client {
+  margin-top: 6rem;
+  .client-list {
+    @include flex();
+    justify-content: flex-start;
+    width: 100%;
+    height: fit-content;
+    row-gap: 1rem;
+    .client-item {
+      height: 4rem;
+      padding-inline: 2rem;
+      .client-logo {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.625rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 3/2;
+          object-fit: contain;
+          filter: grayscale(1);
+        }
+        &:hover {
+          background-color: $main-bg;
+          box-shadow: 0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0),
+            0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.01),
+            0px 20px 13px 0px rgba(0, 0, 0, 0.01),
+            0px 38.51852px 25.48148px 0px rgba(0, 0, 0, 0.01),
+            0px 64.81481px 46.85185px 0px rgba(0, 0, 0, 0.02),
+            0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+          img {
+            filter: grayscale(0);
+          }
         }
       }
     }
@@ -799,6 +862,17 @@ body {
       }
     }
   }
+
+  /* client */
+  .client {
+    margin-top: 12rem;
+    .client-list {
+      row-gap: 2rem;
+      .client-item {
+        height: 5rem;
+      }
+    }
+  }
 }
 
 /* laptop */
@@ -855,7 +929,7 @@ body {
           }
         }
         .product-decore {
-          @include positionAbsolute($right: -2rem, $bottom: 0rem);
+          @include positionAbsolute($right: -4rem, $bottom: 0rem);
         }
       }
     }
@@ -868,6 +942,8 @@ body {
     .feature-text {
       flex-basis: 60%;
       justify-content: flex-start;
+      margin-top: 0;
+      margin-bottom: 0;
     }
     .feature-head {
       padding-inline: 0rem;
@@ -913,6 +989,22 @@ body {
       .testimonial-arrow-btn {
         gap: 3rem;
         margin-top: 12rem;
+      }
+    }
+  }
+
+  /* client */
+  .client {
+    margin-top: 0rem;
+    .client-list {
+      justify-content: center;
+      gap: 1rem;
+      .client-item {
+        height: 6rem;
+        padding-inline: 0rem;
+        .client-logo {
+          padding-inline: 1rem;
+        }
       }
     }
   }
@@ -963,7 +1055,7 @@ body {
           }
         }
         .product-decore {
-          @include positionAbsolute($right: 6rem, $bottom: 0rem);
+          @include positionAbsolute($right: 3rem, $bottom: 0rem);
         }
       }
     }

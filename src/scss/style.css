@@ -33,6 +33,14 @@ Regular 400
 Bold 700 */
 /* css reset */
 /* Box sizing rules */
+/* aspect */
+.hi {
+  aspect-ratio: 3/2;
+  -o-object-fit: contain;
+     object-fit: contain;
+  mix-blend-mode: color-burn;
+}
+
 *,
 *::before,
 *::after {
@@ -180,6 +188,7 @@ body {
   z-index: 1;
   overflow: hidden;
   transition: all ease-in-out 0.2s;
+  cursor: pointer;
 }
 .services .service-card-holder .service-cards-box div .service-card .service-card-icon {
   width: 60px;
@@ -343,6 +352,10 @@ body {
 }
 
 /* feature */
+.feature-overflow {
+  overflow: hidden;
+}
+
 .feature {
   display: flex;
   justify-content: center;
@@ -351,7 +364,6 @@ body {
   gap: 2rem;
   height: -moz-fit-content;
   height: fit-content;
-  overflow: hidden;
 }
 .feature .feature-head {
   padding-inline: 2rem;
@@ -597,6 +609,7 @@ body {
 /* Testimonials */
 .testimonial {
   gap: 0;
+  overflow: visible;
 }
 .testimonial .testimonial-text {
   gap: 1rem;
@@ -620,6 +633,7 @@ body {
   background-color: #e5e5e5;
   border-radius: 100%;
   overflow: hidden;
+  transition: all ease-in-out 0.2s;
 }
 .testimonial .testimonial-text .testimonial-list .testimonial-item button {
   background: transparent;
@@ -627,6 +641,9 @@ body {
   border: none;
   width: 100%;
   height: 100%;
+}
+.testimonial .testimonial-text .testimonial-list .testimonial-item:hover {
+  background-color: #14183e;
 }
 .testimonial .testimonial-text .testimonial-list .testimonial-item:first-child {
   background-color: #14183e;
@@ -747,6 +764,53 @@ body {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.testimonial .testimonial-card-holder .testimonial-arrow-btn button:first-child {
+  transform: rotate(180deg);
+  opacity: 0.4;
+}
+.testimonial .testimonial-card-holder .testimonial-arrow-btn button:first-child:hover {
+  opacity: 1;
+}
+
+/* client */
+.client {
+  margin-top: 6rem;
+}
+.client .client-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  row-gap: 1rem;
+}
+.client .client-list .client-item {
+  height: 4rem;
+  padding-inline: 2rem;
+}
+.client .client-list .client-item .client-logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.625rem;
+}
+.client .client-list .client-item .client-logo img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3/2;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: grayscale(1);
+}
+.client .client-list .client-item .client-logo:hover {
+  background-color: #ffffff;
+  box-shadow: 0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0), 0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 38.51852px 25.48148px 0px rgba(0, 0, 0, 0.01), 0px 64.81481px 46.85185px 0px rgba(0, 0, 0, 0.02), 0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+}
+.client .client-list .client-item .client-logo:hover img {
+  filter: grayscale(0);
 }
 
 /* presets */
@@ -889,6 +953,16 @@ body {
   .testimonial .testimonial-card-holder .testimonial-arrow-btn button {
     width: 2rem;
   }
+  /* client */
+  .client {
+    margin-top: 12rem;
+  }
+  .client .client-list {
+    row-gap: 2rem;
+  }
+  .client .client-list .client-item {
+    height: 5rem;
+  }
 }
 /* laptop */
 @media (min-width: 1024px) {
@@ -940,7 +1014,7 @@ body {
     top: auto;
     bottom: 0rem;
     left: auto;
-    right: -2rem;
+    right: -4rem;
   }
   /* feature */
   .feature {
@@ -950,6 +1024,8 @@ body {
   .feature .feature-text {
     flex-basis: 60%;
     justify-content: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .feature .feature-head {
     padding-inline: 0rem;
@@ -991,6 +1067,21 @@ body {
     gap: 3rem;
     margin-top: 12rem;
   }
+  /* client */
+  .client {
+    margin-top: 0rem;
+  }
+  .client .client-list {
+    justify-content: center;
+    gap: 1rem;
+  }
+  .client .client-list .client-item {
+    height: 6rem;
+    padding-inline: 0rem;
+  }
+  .client .client-list .client-item .client-logo {
+    padding-inline: 1rem;
+  }
 }
 /* laptop large */
 @media (min-width: 1281px) {
@@ -1027,7 +1118,7 @@ body {
     top: auto;
     bottom: 0rem;
     left: auto;
-    right: 6rem;
+    right: 3rem;
   }
   /* feature */
   .feature {
