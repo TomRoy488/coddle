@@ -199,6 +199,9 @@ body {
 
 /* products */
 .products {
+  .products-head {
+    margin-bottom: 2rem;
+  }
   .product-card-holder {
     @include flex($direction: row);
     .product-cards-box {
@@ -206,7 +209,7 @@ body {
       div {
         .product-card {
           width: 100%;
-          height: 20rem;
+          height: 24rem;
           position: relative;
           border-radius: 1.5rem;
           overflow: hidden;
@@ -217,34 +220,37 @@ body {
             0px 64.81481px 46.85185px 0px rgba(0, 0, 0, 0.02),
             0px 100px 80px 0px rgba(0, 0, 0, 0.02);
           @include flex($align-items: flex-end);
+          transition: all ease-in-out 0.2s;
+          cursor: pointer;
           .product-img {
             width: 100%;
             height: 100%;
-            position: absolute;
-            z-index: 0;
+            @include positionAbsolute($top: 0, $bottom: 0, $left: 0, $right: 0);
             img {
               width: 100%;
               height: 100%;
+              object-fit: cover;
             }
           }
           .product-detail {
             position: relative;
             z-index: 1;
             width: 100%;
-            border-radius: 1.5rem;
+            border-radius: 1.5rem 1.5rem 0rem 0rem;
             overflow: hidden;
-            @include flex($direction: column);
+            @include flex($direction: column, $justify-content: flex-start);
             background-color: $main-bg;
             color: $para-color;
-            padding: 1rem;
+            padding: 1.6rem 1rem;
+            gap: 1rem;
+
             * {
               padding: 0;
               margin: 0;
               @include font($fontWeight: $medium);
             }
             h3 {
-              @include flex();
-              justify-content: space-between;
+              @include flex($justify-content: space-between);
               font-size: $sub-title/1.2;
               width: 100%;
               span {
@@ -252,6 +258,21 @@ body {
                 margin: 0;
               }
             }
+            h2 {
+              @include flex($justify-content: flex-start);
+              width: 100%;
+              gap: 0.6rem;
+              img {
+                width: 1rem;
+                aspect-ratio: 1;
+              }
+              p {
+                font-size: $para/1.2;
+              }
+            }
+          }
+          &:hover {
+            transform: scale(1.05);
           }
         }
       }
@@ -307,6 +328,38 @@ body {
             @include positionAbsolute($left: -1.5rem, $bottom: -1.5rem);
             width: 4.25rem;
             height: 4.25rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* products */
+  .products {
+    .products-head {
+      margin-bottom: 3rem;
+    }
+    .product-card-holder {
+      width: 100%;
+      .product-cards-box {
+        width: 100%;
+        padding-inline: 0rem;
+        div {
+          .product-card {
+            .product-detail {
+              h3 {
+                font-size: $sub-title;
+              }
+              h2 {
+                gap: 0.8rem;
+                img {
+                  width: 1.2rem;
+                }
+                p {
+                  font-size: $para;
+                }
+              }
+            }
           }
         }
       }
@@ -385,6 +438,20 @@ body {
           .decore-element {
             width: 6.25rem;
             height: 6.25rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* products */
+  .products {
+    .product-card-holder {
+      .product-cards-box {
+        padding-inline: 10rem;
+        div {
+          .product-card {
+            height: 28rem;
           }
         }
       }
