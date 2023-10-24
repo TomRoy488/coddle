@@ -23,7 +23,7 @@
     <title>Jadoo Travel Agency</title>
   </head>
   <body>
-    <div class="pageholder container-fluid px-xl-5">
+    <div class="pageholder container-fluid px-xl-5 overflow-x-hidden">
       <section class="services px-0 py-4 py-md-5 px-lg-4">
         <div class="heading service-head position-relative">
           <h3 class="subtitle">category</h3>
@@ -123,7 +123,9 @@
           <h1 class="maintitle">Top Destinations</h1>
         </div>
         <div class="product-card-holder">
-          <div class="product-cards-box row gap-5 gap-md-0 row-gap-md-5">
+          <div
+            class="product-cards-box row gap-5 gap-md-0 row-gap-md-5 position-relative"
+          >
             <div
               class="col-lg-4 col-md-6 px-md-4 col-sm-12 py-0 align-items-center justify-content-center d-flex"
             >
@@ -181,18 +183,25 @@
                 </div>
               </div>
             </div>
+            <div class="product-decore">
+              <img src="./src/assets/decorespringimg.png" alt="" />
+            </div>
           </div>
         </div>
       </section>
-      <section class="feature px-0 py-4 py-md-5 px-lg-4">
-        <div class="services feature-text">
+
+      <!-- feature -->
+      <section class="feature px-0 py-4 py-md-5 py-lg-0 px-lg-4">
+        <div
+          class="services feature-text d-flex justify-content-center align-items-center justify-content-lg-start align-items-lg-start"
+        >
           <div class="heading feature-head products-head position-relative">
             <h3 class="subtitle">Easy and Fast</h3>
             <h1 class="maintitle">Book your next trip in 3 easy steps</h1>
           </div>
-          <ul class="feature-lists row">
-            <li class="feature-item col-12">
-              <div class="feature-item-icon">
+          <ul class="feature-lists row m-0 gap-2 p-0">
+            <li class="feature-item col-12 px-0">
+              <div class="feature-item-icon yellowcolor">
                 <img src="./src/assets/boxiconimg.png" alt="icon" />
               </div>
               <div class="feature-item-content">
@@ -203,8 +212,8 @@
                 </p>
               </div>
             </li>
-            <li class="feature-item col-12">
-              <div class="feature-item-icon">
+            <li class="feature-item col-12 px-0">
+              <div class="feature-item-icon redcolor">
                 <img src="./src/assets/watersporticonimg.png" alt="icon" />
               </div>
               <div class="feature-item-content">
@@ -215,8 +224,8 @@
                 </p>
               </div>
             </li>
-            <li class="feature-item col-12">
-              <div class="feature-item-icon">
+            <li class="feature-item col-12 px-0">
+              <div class="feature-item-icon bluecolor">
                 <img src="./src/assets/taxiconimg.png" alt="icon" />
               </div>
               <div class="feature-item-content">
@@ -229,15 +238,15 @@
             </li>
           </ul>
         </div>
-        <div class="feature-card-holder">
-          <div class="feature-card">
+        <div class="feature-card-holder position-relative px-2 px-md-4">
+          <div class="feature-card row gap-3 position-relative z-1">
             <div class="feature-card-img">
               <img src="./src/assets/bookcardimg.jpg" alt="card image" />
             </div>
-            <div class="feature-card-content">
+            <div class="feature-card-content p-0">
               <h2>Trip To Greece</h2>
               <h3>14-29 June<span>|</span>by Robbin joseph</h3>
-              <ul class="feature-card-iconlist">
+              <ul class="feature-card-iconlist p-0">
                 <li>
                   <div class="feature-card-icon icon">
                     <img src="./src/assets/leaficonimg.png" alt="icon" />
@@ -254,11 +263,104 @@
                   </div>
                 </li>
               </ul>
-              <div class="feature-book"></div>
+              <div class="feature-counts">
+                <div>
+                  <div class="feature-count-icon icon">
+                    <img src="./src/assets/buildingiconimg.png" alt="icon" />
+                  </div>
+                  <p class="m-0">24 people going</p>
+                </div>
+                <div class="feature-count-icon icon">
+                  <img src="./src/assets/hearticonimg.png" alt="icon" />
+                </div>
+              </div>
             </div>
-            <div class="feature-card-popup"></div>
+            <div class="feature-card-popup p-3">
+              <div class="feature-popup-img">
+                <img src="./src/assets/bookcardiconimg.jpg" alt="" />
+              </div>
+              <div class="feature-popup-content">
+                <p class="m-0 mb-1 p-0">Ongoing</p>
+                <h2 class="m-0 mb-3 p-0">Trip to rome</h2>
+                <h3 class="m-0 mb-2 p-0"><span>40%</span> completed</h3>
+                <div class="range">
+                  <div></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="feature-card-decore"></div>
+        </div>
+      </section>
+
+      <!-- testimonials -->
+      <section class="feature testimonial px-0 py-4 py-md-5 py-lg-0 px-lg-4">
+        <div
+          class="services testimonial-text feature-text d-flex justify-content-center align-items-center justify-content-lg-start align-items-lg-start"
+        >
+          <div
+            class="heading testimonial-head feature-head products-head position-relative"
+          >
+            <h3 class="subtitle">Testimonials</h3>
+            <h1 class="maintitle">What people say about Us.</h1>
+          </div>
+          <ul class="feature-lists testimonial-list m-0">
+            <li class="px-0 feature-item testimonial-item col-12">
+              <button></button>
+            </li>
+            <li class="feature-item testimonial-item col-12 px-0">
+              <button></button>
+            </li>
+            <li class="feature-item testimonial-item col-12 px-0">
+              <button></button>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="feature-card-holder testimonial-card-holder position-relative px-4"
+        >
+          <div class="testimonial-card-box">
+            <div class="testimonial-item testimonial-item1">
+              <div class="testimonial-img">
+                <img src="./src/assets/testimonialimg.png" alt="person image" />
+                <div class="testimonial-msg-box">
+                  <p>
+                    “On the Windows talking painted pasture yet its express
+                    parties use. Sure last upon he same as knew next. Of
+                    believed or diverted no.”
+                  </p>
+                  <div>
+                    <h3>Mike taylor</h3>
+                    <p>Lahore, Pakistan</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item testimonial-item2">
+              <div class="testimonial-img">
+                <img src="./src/assets/testimonialimg.png" alt="person image" />
+                <div class="testimonial-msg-box">
+                  <p>
+                    “On the Windows talking painted pasture yet its express
+                    parties use. Sure last upon he same as knew next. Of
+                    believed or diverted no.”
+                  </p>
+                  <div>
+                    <h3>Chris Thomas</h3>
+                    <p>CEO of Red Button</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-arrow-btn">
+            <button>
+              <img src="./src/assets/arrowimgicon.png" alt="icon" />
+            </button>
+            <button>
+              <img src="./src/assets/arrowimgicon.png" alt="icon" />
+            </button>
+          </div>
         </div>
       </section>
     </div>

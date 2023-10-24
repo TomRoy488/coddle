@@ -203,6 +203,7 @@ body {
   font-size: 0.9375rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+  color: #080809;
 }
 .services .service-card-holder .service-cards-box div .service-card .service-card-texts p {
   font-size: 0.6666666667rem;
@@ -249,6 +250,7 @@ body {
   width: 100%;
   height: 24rem;
   position: relative;
+  z-index: 1;
   border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: 0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0), 0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 38.51852px 25.48148px 0px rgba(0, 0, 0, 0.01), 0px 64.81481px 46.85185px 0px rgba(0, 0, 0, 0.02), 0px 100px 80px 0px rgba(0, 0, 0, 0.02);
@@ -325,6 +327,326 @@ body {
 .products .product-card-holder .product-cards-box div .product-card:hover {
   transform: scale(1.05);
 }
+.products .product-card-holder .product-cards-box .product-decore {
+  position: absolute;
+  top: auto;
+  bottom: 0rem;
+  left: auto;
+  right: 0;
+  width: 10rem;
+  height: 22rem;
+  z-index: 0;
+}
+.products .product-card-holder .product-cards-box .product-decore img {
+  width: 100%;
+  height: 100%;
+}
+
+/* feature */
+.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-x: hidden;
+}
+.feature .feature-head {
+  padding-inline: 2rem;
+}
+.feature .feature-lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.feature .feature-lists .feature-item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 0.8rem;
+}
+.feature .feature-lists .feature-item .feature-item-icon {
+  width: 3rem;
+  aspect-ratio: 1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.feature .feature-lists .feature-item .feature-item-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.feature .feature-lists .feature-item .feature-item-content {
+  color: #5e6282;
+}
+.feature .feature-lists .feature-item .feature-item-content h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 0.9090909091rem;
+}
+.feature .feature-lists .feature-item .feature-item-content p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.7692307692rem;
+}
+.feature .feature-card-holder {
+  width: 100%;
+  transform: scale(0.8);
+}
+.feature .feature-card-holder .feature-card {
+  padding: 1.2rem;
+  border-radius: 1.625rem;
+  background-color: #ffffff;
+  box-shadow: 0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0), 0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 38.51852px 25.48148px 0px rgba(0, 0, 0, 0.01), 0px 64.81481px 46.85185px 0px rgba(0, 0, 0, 0.02), 0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+}
+.feature .feature-card-holder .feature-card .feature-card-img {
+  width: 100%;
+  height: 10rem;
+  padding: 0;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+.feature .feature-card-holder .feature-card .feature-card-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.feature .feature-card-holder .feature-card .feature-card-content {
+  color: #5e6282;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.feature .feature-card-holder .feature-card .feature-card-content h2,
+.feature .feature-card-holder .feature-card .feature-card-content h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: #080809;
+}
+.feature .feature-card-holder .feature-card .feature-card-content h3 {
+  color: #5e6282;
+  font-size: 1rem;
+}
+.feature .feature-card-holder .feature-card .feature-card-content h3 span {
+  margin-inline: 0.5rem;
+}
+.feature .feature-card-holder .feature-card .feature-card-content .feature-card-iconlist {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.feature .feature-card-holder .feature-card .feature-card-content .feature-card-iconlist li {
+  padding: 0;
+}
+.feature .feature-card-holder .feature-card .feature-card-content .feature-card-iconlist li .feature-card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 2rem;
+  aspect-ratio: 1;
+  padding: 0.6rem;
+  background-color: #f5f5f5;
+  border-radius: 100%;
+}
+.feature .feature-card-holder .feature-card .feature-card-content .feature-card-iconlist li .feature-card-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.feature .feature-card-holder .feature-card .feature-card-content .feature-counts {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+  width: 100%;
+}
+.feature .feature-card-holder .feature-card .feature-card-content .feature-counts div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.feature .feature-card-holder .feature-card .feature-card-content .feature-counts div p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.feature .feature-card-holder .feature-card .feature-card-content .feature-counts .feature-count-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 1.5rem;
+  aspect-ratio: 1;
+}
+.feature .feature-card-holder .feature-card .feature-card-content .feature-counts .feature-count-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.feature .feature-card-holder .feature-card .feature-card-popup {
+  position: absolute;
+  top: auto;
+  bottom: 1rem;
+  left: auto;
+  right: 0rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+  margin-right: -8rem;
+  border-radius: 1.125rem;
+  gap: 0.5rem;
+  box-shadow: 0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0), 0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 38.51852px 25.48148px 0px rgba(0, 0, 0, 0.01), 0px 64.81481px 46.85185px 0px rgba(0, 0, 0, 0.02), 0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.feature .feature-card-holder .feature-card .feature-card-popup .feature-popup-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.feature .feature-card-holder .feature-card .feature-card-popup .feature-popup-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.feature .feature-card-holder .feature-card .feature-card-popup .feature-popup-content {
+  position: relative;
+  padding-right: 4rem;
+}
+.feature .feature-card-holder .feature-card .feature-card-popup .feature-popup-content p,
+.feature .feature-card-holder .feature-card .feature-card-popup .feature-popup-content h2,
+.feature .feature-card-holder .feature-card .feature-card-popup .feature-popup-content h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #080809;
+}
+.feature .feature-card-holder .feature-card .feature-card-popup .feature-popup-content p span,
+.feature .feature-card-holder .feature-card .feature-card-popup .feature-popup-content h2 span,
+.feature .feature-card-holder .feature-card .feature-card-popup .feature-popup-content h3 span {
+  color: #8a79df;
+}
+.feature .feature-card-holder .feature-card .feature-card-popup .feature-popup-content p {
+  color: #5e6282;
+}
+.feature .feature-card-holder .feature-card .feature-card-popup .feature-popup-content h2 {
+  font-size: 1.125rem;
+}
+.feature .feature-card-holder .feature-card .feature-card-popup .feature-popup-content .range {
+  position: absolute;
+  top: auto;
+  bottom: 0rem;
+  left: auto;
+  right: auto;
+  width: 100%;
+  height: 0.3rem;
+  background-color: #f5f5f5;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.feature .feature-card-holder .feature-card .feature-card-popup .feature-popup-content .range div {
+  background-color: #8a79df;
+  width: 40%;
+  height: 100%;
+  border-radius: 1rem;
+}
+.feature .feature-card-holder .feature-card-decore {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  left: auto;
+  right: 0;
+  width: 12rem;
+  aspect-ratio: 1;
+  border-radius: 22.9375rem;
+  opacity: 0.8;
+  background: #59b1e6;
+  filter: blur(75px);
+}
+
+/* Testimonials */
+.testimonial {
+  gap: 0;
+}
+.testimonial .testimonial-text {
+  gap: 1rem;
+}
+.testimonial .testimonial-text .testimonial-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  padding-inline: 2rem;
+}
+.testimonial .testimonial-text .testimonial-list .testimonial-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 0.6rem;
+  aspect-ratio: 1;
+  background-color: #e5e5e5;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.testimonial .testimonial-text .testimonial-list .testimonial-item button {
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.testimonial .testimonial-text .testimonial-list .testimonial-item:first-child {
+  background-color: #006380;
+}
+.testimonial .testimonial-card-holder {
+  transform: none;
+}
+
+/* presets */
+.yellowcolor {
+  background-color: #f1a501;
+}
+
+.redcolor {
+  background-color: #df6951;
+}
+
+.bluecolor {
+  background-color: #006380;
+}
 
 /* media query breakpoints */
 /* tablet */
@@ -400,6 +722,28 @@ body {
   .products .product-card-holder .product-cards-box div .product-card .product-detail h2 p {
     font-size: 1rem;
   }
+  .products .product-card-holder .product-cards-box .product-decore {
+    position: absolute;
+    top: 5rem;
+    bottom: auto;
+    left: auto;
+    right: -1rem;
+  }
+  /* feature */
+  .feature .feature-lists {
+    width: 80%;
+  }
+  .feature .feature-lists .feature-item .feature-item-icon {
+    width: 3rem;
+  }
+  .feature .feature-lists .feature-item .feature-item-content h3,
+  .feature .feature-lists .feature-item .feature-item-content p {
+    font-size: 1rem;
+  }
+  .feature .feature-card-holder {
+    width: 60%;
+    transform: scale(0.9);
+  }
 }
 /* laptop */
 @media (min-width: 1024px) {
@@ -442,6 +786,46 @@ body {
     width: 4.25rem;
     height: 4.25rem;
   }
+  /* product */
+  .products .product-card-holder .product-cards-box div .product-card .product-detail {
+    gap: 1.5rem;
+  }
+  .products .product-card-holder .product-cards-box .product-decore {
+    position: absolute;
+    top: auto;
+    bottom: 0rem;
+    left: auto;
+    right: -2rem;
+  }
+  /* feature */
+  .feature {
+    flex-direction: row;
+    gap: 0;
+  }
+  .feature .feature-text {
+    flex-basis: 60%;
+    justify-content: flex-start;
+  }
+  .feature .feature-head {
+    padding-inline: 0rem;
+    align-items: flex-start;
+  }
+  .feature .feature-head h1,
+  .feature .feature-head h3 {
+    text-align: start;
+  }
+  .feature .feature-lists {
+    justify-content: flex-start;
+  }
+  .feature .feature-lists .feature-item .feature-item-icon {
+    width: 3.5rem;
+  }
+  .feature .feature-card-holder {
+    flex-basis: 40%;
+    transform: none;
+    align-self: flex-end;
+    margin-bottom: 6rem;
+  }
 }
 /* laptop large */
 @media (min-width: 1281px) {
@@ -468,10 +852,34 @@ body {
   }
   /* products */
   .products .product-card-holder .product-cards-box {
-    padding-inline: 10rem;
+    padding-inline: 8rem;
   }
   .products .product-card-holder .product-cards-box div .product-card {
     height: 28rem;
+  }
+  .products .product-card-holder .product-cards-box .product-decore {
+    position: absolute;
+    top: auto;
+    bottom: 0rem;
+    left: auto;
+    right: 6rem;
+  }
+  /* feature */
+  .feature {
+    padding-inline: 10rem !important;
+    gap: 2rem;
+  }
+  .feature .feature-head {
+    padding-inline: 0rem 3rem;
+  }
+  .feature .feature-card-holder .feature-card .feature-card-popup {
+    margin-right: -5rem;
+  }
+}
+/* 4k */
+@media (min-width: 1440px) {
+  .pageholder {
+    max-width: 1440px;
   }
 }
 /* 
