@@ -1008,6 +1008,10 @@ footer {
             font-size: $sub-title;
             color: $black-bg;
           }
+          ul li {
+            cursor: pointer;
+            padding-block: 0.5rem;
+          }
         }
       }
       .footer-social {
@@ -1019,6 +1023,7 @@ footer {
           gap: 1rem;
           li {
             @include flex();
+            cursor: pointer;
             .footer-icon {
               @include flex();
               width: 2.5rem;
@@ -1054,6 +1059,7 @@ footer {
             height: 2.5rem;
             border-radius: 2rem;
             overflow: hidden;
+            cursor: pointer;
             img {
               height: 100%;
             }
@@ -1675,7 +1681,6 @@ footer {
         }
         .footer-social {
           margin-top: 0;
-          gap: 0.5rem;
           ul {
             li {
               .footer-icon {

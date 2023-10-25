@@ -1160,6 +1160,10 @@ footer .footer .footer-holder .footer-menus .footer-menu-list h2 {
   font-size: 1.125rem;
   color: #080809;
 }
+footer .footer .footer-holder .footer-menus .footer-menu-list ul li {
+  cursor: pointer;
+  padding-block: 0.5rem;
+}
 footer .footer .footer-holder .footer-social {
   margin-top: 1rem;
   display: flex;
@@ -1180,6 +1184,7 @@ footer .footer .footer-holder .footer-social ul li {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  cursor: pointer;
 }
 footer .footer .footer-holder .footer-social ul li .footer-icon {
   display: flex;
@@ -1225,6 +1230,7 @@ footer .footer .footer-holder .footer-social .footer-store .store-logo {
   height: 2.5rem;
   border-radius: 2rem;
   overflow: hidden;
+  cursor: pointer;
 }
 footer .footer .footer-holder .footer-social .footer-store .store-logo img {
   height: 100%;
@@ -1779,7 +1785,6 @@ footer .copyright p {
   }
   footer .footer .footer-holder .footer-social {
     margin-top: 0;
-    gap: 0.5rem;
   }
   footer .footer .footer-holder .footer-social ul li .footer-icon {
     width: 2.5rem;
