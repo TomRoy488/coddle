@@ -17,11 +17,6 @@
 /* css reset */
 /* Box sizing rules */
 /* aspect */
-.hi {
-  aspect-ratio: 3/2;
-  object-fit: contain;
-  mix-blend-mode: color-burn;
-}
 *,
 *::before,
 *::after {
@@ -85,7 +80,173 @@ body {
   background-color: $main-bg;
   color: $main-text-color;
 }
+/* header */
+/* nav */
+nav {
+  background: transparent !important;
+  // background: $main-bg !important;
+  z-index: 10 !important;
+  div {
+    .navbar-toggler {
+      box-shadow: none;
+      border: none;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    a {
+      img {
+        width: 60px;
+        height: 20px;
+      }
+    }
+    button {
+      border: none;
+      outline: none;
+      box-shadow: none;
+      &:focus,
+      &:hover {
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+      .navbar-toggler-icon {
+        filter: hue-rotate(180deg) !important;
+      }
+    }
+    div {
+      background-color: $main-bg !important;
+      padding-left: 2rem !important;
+      padding-top: 2rem !important;
+      box-shadow: 0px 50px 0px 50px $main-bg !important;
+      transition: all ease-in-out 0.5s !important;
 
+      ul {
+        li {
+          a,
+          .active {
+            @include font("Open Sans", $fontWeight: $semiBold);
+            color: $black-bg !important;
+          }
+          button,
+          .dropdown-toggle {
+            @include font("Open Sans", $fontWeight: $semiBold);
+            border: 2px solid $black-bg !important;
+            background: transparent !important;
+            color: $black-bg !important;
+          }
+          .dropdown-toggle {
+            border: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+/* hero */
+.homeHero {
+  @include flex();
+  position: relative;
+  .home-content-box {
+    position: relative;
+    z-index: 1;
+    @include flex($justify-content: flex-start, $direction: column);
+    gap: 1rem;
+    .content-item {
+      @include flex();
+      .home-text-content {
+        padding-top: 4rem;
+        @include flex($direction: column, $align-items: flex-start);
+        h2 {
+          @include font($fontWeight: $bold);
+          color: $btn-color-two;
+          font-size: $sub-title/1.5;
+          text-transform: uppercase;
+        }
+        h1 {
+          @include font("Volkhov", $fontWeight: $bold);
+          color: $main-text-color;
+          font-size: $main-title-size/2.5;
+          span {
+            position: relative;
+            z-index: 1;
+            width: fit-content;
+            height: fit-content;
+            &::after {
+              z-index: -1;
+              content: "";
+              width: 10rem;
+              height: 0.5rem;
+              @include positionAbsolute($bottom: 0, $left: -1rem, $right: 0);
+              background-image: url("../assets/brushdecoreimg.png");
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: top left;
+            }
+          }
+        }
+        p {
+          @include font($fontWeight: $medium);
+          color: $para-color;
+          font-size: $para/1.5;
+        }
+        .home-btns {
+          @include flex();
+          height: fit-content;
+          gap: 1rem;
+          .home-btn {
+            @include flex();
+            border: none;
+            outline: none;
+            @include font($sub-font, $fontWeight: $medium);
+            font-size: $sub-title/1.5;
+            border-radius: 0.625rem;
+            overflow: hidden;
+            padding: 0.6rem 1rem;
+          }
+          .find-btn {
+            background-color: $btn-color-one;
+            box-shadow: 0px 20px 35px 0px rgba(241, 165, 1, 0.15);
+          }
+          .play-btn {
+            background-color: $btn-color-two;
+            border-radius: 100%;
+            height: 100%;
+            aspect-ratio: 1;
+            box-shadow: 0px 15px 30px rgba(223, 105, 81, 0.3);
+          }
+        }
+      }
+    }
+    .home-bg-holder {
+      width: 100%;
+      height: 100%;
+      .bg-holder {
+        width: 100%;
+        aspect-ratio: 1;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  &::after {
+    position: absolute;
+    transform: scale(1.1);
+    top: 0;
+    right: 0;
+    content: "";
+    width: 14rem;
+    z-index: 0;
+    aspect-ratio: 1;
+    background-image: url("../assets/herodecoreimg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
 /* services */
 .services {
   @include flex($direction: column);
@@ -812,6 +973,8 @@ body {
 }
 /* footer */
 footer {
+  flex-direction: column !important;
+  gap: 3rem !important;
   .footer {
     @include flex($justify-content: flex-start);
     margin-top: 4rem;
@@ -919,10 +1082,81 @@ footer {
 .bluecolor {
   background-color: #006380;
 }
-/* media query breakpoints */
 
+/* media query breakpoints */
 /* tablet */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 @media (min-width: 768px) {
+  /* hero */
+  .homeHero {
+    .home-content-box {
+      height: fit-content;
+      position: relative;
+      @include flex(
+        $justify-content: flex-start,
+        $align-items: flex-start,
+        $direction: row
+      );
+      gap: 0;
+      .content-text {
+        position: relative;
+        z-index: 1;
+        .home-text-content {
+          height: fit-content;
+          gap: 1rem;
+          h2 {
+            font-size: $sub-title;
+          }
+          h1 {
+            font-size: $main-title-size/1.5;
+            span {
+              &::after {
+                content: "";
+                width: 20rem;
+                height: 0.5rem;
+                @include positionAbsolute($bottom: 0, $left: -1rem, $right: 0);
+
+                background-size: contain;
+                background-position: top left;
+              }
+            }
+          }
+          p {
+            font-size: $para;
+          }
+          .home-btns {
+            gap: 1.5rem;
+            .home-btn {
+              font-size: $sub-title;
+              padding: 1rem 2rem;
+            }
+            .play-btn {
+              img {
+                width: 1rem;
+              }
+            }
+          }
+        }
+      }
+      .home-bg-holder {
+        .bg-holder {
+          img {
+            position: absolute;
+            top: 0;
+            right: -12rem;
+            z-index: 0;
+          }
+        }
+      }
+    }
+    &::after {
+      transform: scale(1.1);
+
+      width: 20.5rem;
+    }
+  }
   /* services */
   .services {
     .heading {
@@ -1192,10 +1426,54 @@ footer {
       }
     }
   }
+  nav {
+    padding-inline: 1rem !important;
+    div {
+      a {
+        img {
+          width: 100px;
+          height: 30px;
+        }
+      }
+    }
+  }
 }
 
 /* laptop */
+/*$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/*$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/*$$$$$$$$$$$$$$$$$$$$$$$$$ */
 @media (min-width: 1024px) {
+  /* hemo */
+  .homeHero {
+    .home-content-box {
+      margin-top: 4rem;
+
+      .content-text {
+        .home-text-content {
+          h1 {
+            font-size: $main-title-size/1.2;
+            span {
+              &::after {
+                height: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+      .home-bg-holder {
+        .bg-holder {
+          img {
+            right: -16rem;
+          }
+        }
+      }
+    }
+    &::after {
+      transform: scale(1.1);
+      width: 30rem;
+    }
+  }
   /* services */
   .services {
     margin-block: 4rem;
@@ -1384,6 +1662,7 @@ footer {
         }
         .footer-menus {
           @include flex($align-items: flex-start); //c
+          gap: 3rem;
           .footer-menu-list {
             h2 {
               font-size: $sub-title * 1.1; //c
@@ -1416,10 +1695,58 @@ footer {
       }
     }
   }
+  nav {
+    background: transparent !important;
+    padding-inline: 1rem !important;
+    div {
+      div {
+        background: transparent !important;
+        padding-left: 0rem !important;
+        padding-top: 0rem !important;
+        box-shadow: none !important;
+        transition: all ease-in-out 0.5s !important;
+      }
+    }
+  }
 }
 
 /* laptop large */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 @media (min-width: 1281px) {
+  /* hemo */
+  .homeHero {
+    padding-inline: 8rem !important;
+
+    .home-content-box {
+      .content-text {
+        .home-text-content {
+          h1 {
+            font-size: $main-title-size;
+            span {
+              &::after {
+                height: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+      .home-bg-holder {
+        .bg-holder {
+          img {
+            top: 3rem;
+            right: -16rem;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+    &::after {
+      transform: scale(1.2);
+      width: 36rem;
+    }
+  }
   /* services */
   .services {
     .heading {
@@ -1561,14 +1888,37 @@ footer {
       width: 10rem;
     }
   }
+  footer {
+    .footer {
+      width: 100%;
+      .footer-holder {
+        width: 100%;
+        .footer-brand-box {
+          flex-basis: 20%;
+        }
+        .footer-menus {
+          gap: 4rem;
+        }
+      }
+    }
+  }
+  nav {
+    padding-inline: 10rem !important;
+  }
 }
-@media (min-width: 1620px) {
+@media (min-width: 1900px) {
+  .products .product-card-holder .product-cards-box div .product-card {
+    height: 40rem;
+  }
 }
 /* 4k */
 @media (min-width: 1990px) {
   .pageholder {
     max-width: 1990px;
     height: fit-content;
+    position: relative;
+  }
+  nav {
   }
 }
 /* 

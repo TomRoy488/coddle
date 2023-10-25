@@ -23,7 +23,95 @@
     <title>Jadoo Travel Agency</title>
   </head>
   <body>
+    <!--.----------------------------------------------------------------------->
+    <!-- page body holder -->
+    <!--.----------------------------------------------------------------------->
     <div class="pageholder container-fluid overflow-x-hidden px-xl-5">
+      <header>
+        <!-- nav bar -->
+        <!--.----------------------------------------------------------------------->
+        <nav
+          class="navbar navbar-expand-lg position-absolute pt-lg-5 top-0 start-0 end-0"
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="./src/assets/Logo.png" alt="Bootstrap" />
+            </a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon position-relative"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse flex-lg-grow-0"
+              id="navbarTogglerDemo02"
+            >
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-3 gap-xl-5">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Desitnations</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Hotels</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active">Flights</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active">Bookings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active">Login</a>
+                </li>
+                <li class="nav-item">
+                  <button class="btn py-1" type="submit">Sign up</button>
+                </li>
+                <li class="nav-item py-2 py-lg-0">
+                  <button class="btn btn-secondary dropdown-toggle">EN</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- hero -->
+        <!--.----------------------------------->
+        <div class="homeHero px-0 py-4 py-md-5 px-lg-4">
+          <div class="home-content-box">
+            <div class="content-item content-text">
+              <div class="home-text-content">
+                <h2>Best Destinations around the world</h2>
+                <h1>Travel, <span>enjoy</span> and live a new and full life</h1>
+                <p>
+                  Built Wicket longer admire do barton vanity itself do in it.
+                  Preferred to sportsmen it engrossed listening. Park gate sell
+                  they west hard for the.
+                </p>
+                <div class="home-btns">
+                  <button class="find-btn home-btn">Find out more</button>
+                  <button class="play-btn home-btn">
+                    <img src="./src/assets/PlayIcon.png" alt="icon" />
+                  </button>
+                  <p class="p-0 m-0">Play Demo</p>
+                </div>
+              </div>
+            </div>
+            <div class="content-item home-bg-holder">
+              <div class="bg-holder">
+                <img src="./src/assets/TravellerImg.png" alt="poster" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!--services-->
       <section class="services px-0 py-4 py-md-5 px-lg-4">
         <div class="heading service-head position-relative">
           <h3 class="subtitle">category</h3>
@@ -430,8 +518,8 @@
         </div>
       </section>
       <!-- footer -->
-      <footer>
-        <div class="footer feature products px-0 py-4 py-md-5 px-lg-4">
+      <footer class="feature products px-0 py-4 py-md-5 px-lg-4">
+        <div class="footer">
           <div class="footer-holder">
             <div class="footer-brand-box">
               <h1>Jadoo.</h1>
@@ -496,5 +584,10 @@
         <div class="copyright"><p>All rights reserved@jadoo.com</p></div>
       </footer>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
